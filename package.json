@@ -4,9 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint:format:check": "biome format .",
+    "lint:format:fix": "biome format . --write",
+    "lint:quality:check": "biome format .",
+    "lint:quality:fix": "biome format . --write"
   },
   "keywords": [],
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@biomejs/biome": "1.9.3"
+  }
 }
