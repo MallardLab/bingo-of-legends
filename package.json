@@ -8,7 +8,8 @@
     "lint:format:fix": "biome format . --write",
     "lint:quality:check": "biome format .",
     "lint:quality:fix": "biome format . --write",
-    "prepare": "husky"
+    "prepare": "husky",
+    "commit": "cz"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +18,13 @@
     "@biomejs/biome": "1.9.3",
     "@commitlint/cli": "19.5.0",
     "@commitlint/config-conventional": "19.5.0",
+    "commitizen": "4.3.1",
+    "cz-conventional-changelog": "3.3.0",
     "husky": "9.1.6"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   }
 }
