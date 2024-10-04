@@ -8,6 +8,7 @@
     "lint:format:fix": "biome format . --write",
     "lint:quality:check": "biome format .",
     "lint:quality:fix": "biome format . --write",
+    "lint:secretlint:check": "pnpm exec secretlint --maskSecrets **/*",
     "prepare": "husky",
     "commit": "cz"
   },
@@ -18,9 +19,11 @@
     "@biomejs/biome": "1.9.3",
     "@commitlint/cli": "19.5.0",
     "@commitlint/config-conventional": "19.5.0",
+    "@secretlint/secretlint-rule-preset-recommend": "^8.2.4",
     "commitizen": "4.3.1",
     "cz-conventional-changelog": "3.3.0",
-    "husky": "9.1.6"
+    "husky": "9.1.6",
+    "secretlint": "8.2.4"
   },
   "config": {
     "commitizen": {
