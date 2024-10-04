@@ -1,0 +1,33 @@
+name: Linting
+
+on: pull_request
+
+jobs:
+  format:
+    name: Biome Format
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9.12.0
+          node-version: "lts/Iron"
+      
+      - run: pnpm install --frozen-lockfile
+
+      - run: pnpm lint:format:check
+  quality:
+    name: Biome Quality
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9.12.0
+          node-version: "lts/Iron"
+      
+      - run: pnpm install --frozen-lockfile
+
+      - run: pnpm lint:quality:check
